@@ -1,12 +1,15 @@
 import net.serenitybdd.junit.runners.SerenityRunner;
-import net.serenitybdd.rest.SerenityRest;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.rest.abiities.CallAnApi;
-import net.serenitybdd.screenplay.rest.interactions.Get;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import questions.ResponseCode;
+import tasks.GetUsers;
 
-import static org.assertj.core.api.Assertions.assertThat;
+import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
+import static org.hamcrest.CoreMatchers.equalTo;
+
 
 @RunWith(SerenityRunner.class)
 public class SerenityBddTests {
@@ -14,7 +17,7 @@ public class SerenityBddTests {
     private final String restApiUrl = "http://localhost:5000/api";
 
     @Test
-    public void initialTest(){
+    public void initialTest() {
         Actor julian = Actor.named("Julian the trainer")
                 .whoCan(CallAnApi.at(restApiUrl));
 
@@ -22,7 +25,9 @@ public class SerenityBddTests {
                 GetUsers.fromPage(3)
         );
 
-        assertThat(SerenityRest.lastResponse().statusCode()).isEqualTo(200);
+        julian.should(
+                seeThat("el codigo de respuesta", new ResponseCode(), equalTo(200))
+        );
     }
 
 }
