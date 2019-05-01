@@ -11,7 +11,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 @RunWith(SerenityRunner.class)
 public class SerenityBddTests {
 
-
     private final String restApiUrl = "http://localhost:5000/api";
 
     @Test
@@ -20,10 +19,10 @@ public class SerenityBddTests {
                 .whoCan(CallAnApi.at(restApiUrl));
 
         julian.attemptsTo(
-                Get.resource("/users?page=2")
+                GetUsers.fromPage(3)
         );
 
         assertThat(SerenityRest.lastResponse().statusCode()).isEqualTo(200);
-
     }
+
 }
