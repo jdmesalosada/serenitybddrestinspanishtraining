@@ -77,7 +77,6 @@ public class SerenityBddTests {
         Actor julian = Actor.named("Julian the trainer")
                 .whoCan(CallAnApi.at(restApiUrl));
 
-
         RegisterUserInfo registerUserInfo = new RegisterUserInfo();
 
         registerUserInfo.setName("morpheus");
@@ -93,10 +92,5 @@ public class SerenityBddTests {
         julian.should(
                 seeThat("el codigo de respuesta", new ResponseCode(), equalTo(200))
         );
-
-
-
     }
-
-
 }
