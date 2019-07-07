@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="1" name="com.testautomation.mesaj.SerenityBddTest" skipped="0" tests="4" time="7.6" timestamp="2019-07-07 06:44:33"><testcase classname="com.testautomation.mesaj.SerenityBddTest" name="Register user test"/><testcase classname="com.testautomation.mesaj.SerenityBddTest" name="Fact test"/><testcase classname="com.testautomation.mesaj.SerenityBddTest" name="Initial test"><failure message="&#10;Expected: &quot;avatar&quot;&#10;     but: was &quot;https://s3.amazonaws.com/uifaces/faces/twitter/calebogden/128.jpg&quot;" type="java.lang.AssertionError">
+Expected: "avatar"
+     but: was "https://s3.amazonaws.com/uifaces/faces/twitter/calebogden/128.jpg"</failure><system-err>
+Expected: "avatar"
+     but: was "https://s3.amazonaws.com/uifaces/faces/twitter/calebogden/128.jpg"
+com.testautomation.mesaj.SerenityBddTest.initialTest(SerenityBddTest.java:47)
+</system-err></testcase><testcase classname="com.testautomation.mesaj.SerenityBddTest" name="Register user test2"/></testsuite>

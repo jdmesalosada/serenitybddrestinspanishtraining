@@ -1,0 +1,11 @@
+-------------------------------------------------------------------------------
+Test set: com.testautomation.mesaj.SerenityBddTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 13.009 s <<< FAILURE! - in com.testautomation.mesaj.SerenityBddTest
+initialTest(com.testautomation.mesaj.SerenityBddTest)  Time elapsed: 0.21 s  <<< FAILURE!
+java.lang.AssertionError: 
+
+Expected: "avatar"
+     but: was "https://s3.amazonaws.com/uifaces/faces/twitter/calebogden/128.jpg"
+	at com.testautomation.mesaj.SerenityBddTest.initialTest(SerenityBddTest.java:47)
+
