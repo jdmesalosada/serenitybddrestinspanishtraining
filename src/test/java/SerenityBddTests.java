@@ -1,16 +1,16 @@
-import facts.NetflixPlans;
-import models.users.Datum;
-import models.users.RegisterUserInfo;
+import java.facts.NetflixPlans;
+import java.models.users.Datum;
+import java.models.users.RegisterUserInfo;
 import net.serenitybdd.junit.runners.SerenityRunner;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.rest.abiities.CallAnApi;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import questions.GetUsersQuestion;
-import questions.ResponseCode;
-import tasks.GetUsers;
-import tasks.RegisterUser;
+import java.questions.GetUsersQuestion;
+import java.questions.ResponseCode;
+import java.tasks.GetUsers;
+import java.tasks.RegisterUser;
 
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static org.hamcrest.CoreMatchers.equalTo;

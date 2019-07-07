@@ -1,0 +1,9 @@
+java/interactions/Post.class
+java/tasks/RegisterUser.class
+java/questions/ResponseCode.class
+java/models/users/Users.class
+java/models/users/Datum.class
+java/models/users/RegisterUserInfo.class
+java/facts/NetflixPlans.class
+java/tasks/GetUsers.class
+java/questions/GetUsersQuestion.class
