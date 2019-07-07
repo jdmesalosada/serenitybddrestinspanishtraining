@@ -18,7 +18,7 @@ import static org.hamcrest.CoreMatchers.notNullValue;
 
 
 @RunWith(SerenityRunner.class)
-public class SerenityBddTests {
+public class SerenityBddTest {
 
     private final String restApiUrl = "http://localhost:5000/api";
 

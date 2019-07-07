@@ -108,17 +108,20 @@
                     <includes>
                         <include>**/When*.java</include>
                         <include>**/*Spec.java</include>
+                        <!--Rename the class from SerenityBddTest to SerenityBddTest-->
                         <include>**/*Test.java</include>
+
                     </includes>
                 </configuration>
             </plugin>
-            <plugin>
+            <!--<plugin>
                 <artifactId>maven-failsafe-plugin</artifactId>
                 <version>2.20</version>
                 <configuration>
                     <includes>
                         <include>**/acceptancetests/*.java</include>
                         <include>**/apitests/*.java</include>
+                        <include>SerenityBddTest.java</include>
                     </includes>
                     <systemPropertyVariables>
                         <webdriver.base.url>${webdriver.base.url}</webdriver.base.url>
@@ -135,7 +138,7 @@
                         </goals>
                     </execution>
                 </executions>
-            </plugin>
+            </plugin> -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
