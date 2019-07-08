@@ -109,56 +109,34 @@
         <artifactId>maven-surefire-plugin</artifactId>
         <version>2.20</version>
         <configuration>
-          <includes>
-            <include>**/When*.java</include>
-            <include>**/*Spec.java</include>
-            <!--Rename the class from SerenityBddTest to SerenityBddTest-->
-            <include>**/*Test.java</include>
-
-          </includes>
+          <argLine>-Xmx1024m -XX:MaxPermSize=512m</argLine>
+          <skip>true</skip>
+          <skipTests>true</skipTests>
         </configuration>
       </plugin>
-      <!--<plugin>
-          <artifactId>maven-failsafe-plugin</artifactId>
-          <version>2.20</version>
-          <configuration>
-              <includes>
-                  <include>**/acceptancetests/*.java</include>
-                  <include>**/apitests/*.java</include>
-                  <include>SerenityBddTest.java</include>
-              </includes>
-              <systemPropertyVariables>
-                  <webdriver.base.url>${webdriver.base.url}</webdriver.base.url>
-              </systemPropertyVariables>
-              <parallel>classes</parallel>
-              <threadCount>${parallel.tests}</threadCount>
-              <forkCount>${parallel.tests}</forkCount>
-          </configuration>
-          <executions>
-              <execution>
-                  <goals>
-                      <goal>integration-test</goal>
-                      <goal>verify</goal>
-                  </goals>
-              </execution>
-          </executions>
-      </plugin> -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.7.0</version>
+        <artifactId>maven-failsafe-plugin</artifactId>
+        <version>2.18.1</version>
         <configuration>
-          <source>1.8</source>
-          <target>1.8</target>
+          <includes>
+            <include>**/*Test.java</include>
+            <include>**/features/**/*.java</include>
+          </includes>
         </configuration>
+        <executions>
+          <execution>
+            <goals>
+              <goal>integration-test</goal>
+              <goal>verify</goal>
+            </goals>
+          </execution>
+        </executions>
       </plugin>
       <plugin>
         <groupId>net.serenity-bdd.maven.plugins</groupId>
         <artifactId>serenity-maven-plugin</artifactId>
         <version>${serenity.maven.version}</version>
-        <configuration>
-          <tags>${tags}</tags>
-        </configuration>
         <dependencies>
           <dependency>
             <groupId>net.serenity-bdd</groupId>
@@ -176,8 +154,18 @@
           </execution>
         </executions>
       </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>1.8</source>
+          <target>1.8</target>
+        </configuration>
+      </plugin>
     </plugins>
+
   </build>
+
   <profiles>
   </profiles>
 
