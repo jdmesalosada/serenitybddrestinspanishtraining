@@ -50,7 +50,7 @@ public class SerenityBddTest {
         );
     }
 
-    Test
+    @Test
     public void registerUserTest() {
         Actor julian = Actor.named("Julian the trainer")
                 .whoCan(CallAnApi.at(restApiUrl));
