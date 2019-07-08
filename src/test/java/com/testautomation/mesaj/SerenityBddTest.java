@@ -50,7 +50,7 @@ public class SerenityBddTest {
         );
     }
 
-    /*@Test
+    Test
     public void registerUserTest() {
         Actor julian = Actor.named("Julian the trainer")
                 .whoCan(CallAnApi.at(restApiUrl));
@@ -101,5 +101,5 @@ public class SerenityBddTest {
                 .whoCan(CallAnApi.at(restApiUrl));
 
         julian.has(NetflixPlans.toViewSeries());
-    }*/
+    }
 }
