@@ -20,6 +20,7 @@ public class RegisterUserStepDefinitions {
     public void julianEsUnClienteQueQuierePoderAdministrarSusProductosBancarios() {
         julian = Actor.named("Julian the trainer")
                 .whoCan(CallAnApi.at(restApiUrl));
+        /**/
     }
 
     @When("^el envia la informacion requerida para el registro$")
