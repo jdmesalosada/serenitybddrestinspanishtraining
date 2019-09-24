@@ -1,5 +1,10 @@
 package com.testautomation.mesaj.models.users;
 
+import lombok.Builder;
+import lombok.Data;
+
+@Builder
+@Data
 public class Datum {
 
     private Integer id;

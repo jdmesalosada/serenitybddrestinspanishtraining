@@ -32,6 +32,8 @@ public class RegisterUserStepDefinitions {
                 "    \"password\": \"serenity\"\n" +
                 "}";
 
+
+
         julian.attemptsTo(
                 RegisterUser.withInfo(registerUserInfo)
 

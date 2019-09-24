@@ -7,7 +7,6 @@ public class RegisterUserInfo {
     private String email;
     private String password;
 
-
     public String getName() {
         return name;
     }

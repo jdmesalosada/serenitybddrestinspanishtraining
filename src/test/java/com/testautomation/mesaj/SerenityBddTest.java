@@ -2,11 +2,15 @@ package com.testautomation.mesaj;
 
 import com.testautomation.mesaj.facts.NetflixPlans;
 import com.testautomation.mesaj.models.users.Datum;
+import com.testautomation.mesaj.models.users.Foo;
 import com.testautomation.mesaj.models.users.RegisterUserInfo;
 import com.testautomation.mesaj.questions.GetUsersQuestion;
 import com.testautomation.mesaj.questions.ResponseCode;
 import com.testautomation.mesaj.tasks.GetUsers;
 import com.testautomation.mesaj.tasks.RegisterUser;
+import io.vavr.collection.HashMap;
+import lombok.val;
+import lombok.var;
 import net.serenitybdd.junit.runners.SerenityRunner;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.rest.abiities.CallAnApi;
@@ -21,6 +25,23 @@ import static org.hamcrest.CoreMatchers.notNullValue;
 public class SerenityBddTest {
 
     private final String restApiUrl = "http://localhost:5000/api";
+
+    @Test
+    public void initiala() {
+        Foo foo = new Foo();
+        foo.setName("algo");
+        foo.setAge(10);
+        foo.setLastName("algomas");
+
+        Foo foo1 = new Foo();
+        foo1.setName("algo");
+        foo1.setAge(10);
+
+        System.out.println(foo1.toString());
+        System.out.println(foo.toString());
+
+        System.out.println(foo.equals(foo1));
+    }
 
     @Test
     public void initialTest() {
