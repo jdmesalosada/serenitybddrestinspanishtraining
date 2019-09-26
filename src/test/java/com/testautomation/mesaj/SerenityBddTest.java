@@ -28,7 +28,7 @@ public class SerenityBddTest {
 
     @Test
     public void initiala() {
-        Foo foo = new Foo();
+       /* Foo foo = new Foo();
         foo.setName("algo");
         foo.setAge(10);
         foo.setLastName("algomas");
@@ -40,7 +40,21 @@ public class SerenityBddTest {
         System.out.println(foo1.toString());
         System.out.println(foo.toString());
 
-        System.out.println(foo.equals(foo1));
+        System.out.println(foo.equals(foo1));*/
+
+
+        Foo foo2 = Foo.builder()
+                .age(10)
+                .email("email")
+                .lastName("lastname")
+                .build();
+
+        Foo foo3 = Foo.builder()
+                .age(10)
+                .build();
+
+        System.out.println(foo2.toString());
+        System.out.println(foo3.toString());
     }
 
     @Test

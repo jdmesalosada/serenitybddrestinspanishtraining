@@ -4,6 +4,7 @@ import lombok.*;
 
 @Data
 @EqualsAndHashCode(exclude = {"lastName"})
+@Builder
 public class Foo {
 
     private String name;
