@@ -3,8 +3,7 @@ package com.testautomation.mesaj.models.users;
 import lombok.*;
 
 @Data
-@EqualsAndHashCode(exclude = {"lastName"})
-@Builder
+@AllArgsConstructor
 public class Foo {
 
     private String name;
