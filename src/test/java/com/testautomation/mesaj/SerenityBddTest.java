@@ -88,7 +88,7 @@ public class SerenityBddTest {
 
     @Test
     public void registerUserTest() {
-        Actor julian = Actor.named("Julian the trainer")
+        /*Actor julian = Actor.named("Julian the trainer")
                 .whoCan(CallAnApi.at(restApiUrl));
 
         String registerUserInfo = "{\n" +
@@ -105,13 +105,13 @@ public class SerenityBddTest {
 
         julian.should(
                 seeThat("el codigo de respuesta", new ResponseCode(), equalTo(200))
-        );
+        );*/
 
     }
 
     @Test
     public void registerUserTest2() {
-        Actor julian = Actor.named("Julian the trainer")
+       /* Actor julian = Actor.named("Julian the trainer")
                 .whoCan(CallAnApi.at(restApiUrl));
 
         RegisterUserInfo registerUserInfo = new RegisterUserInfo();
@@ -128,7 +128,7 @@ public class SerenityBddTest {
 
         julian.should(
                 seeThat("el codigo de respuesta", new ResponseCode(), equalTo(200))
-        );
+        );*/
     }
 
     @Test
