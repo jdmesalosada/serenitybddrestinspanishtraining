@@ -1,0 +1,25 @@
+<persistence version="2.0"
+             xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+
+    <!-- Define a name used to get an entity manager. Define that you will
+    complete transactions with the DB  -->
+    <persistence-unit name="serenitybddrestinspanishtraining" transaction-type="RESOURCE_LOCAL">
+
+        <!-- Define the class for Hibernate which implements JPA -->
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <!-- Define the object that should be persisted in the database -->
+        <class>com.testautomation.mesaj.database.entity.Example</class>
+        <properties>
+            <!-- Driver for DB database -->
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+            <!-- URL for DB -->
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost/test_automation" />
+            <!-- Username -->
+            <property name="javax.persistence.jdbc.user" value="root" />
+            <!-- Password -->
+            <property name="javax.persistence.jdbc.password" value="my-secret-pw" />
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL57Dialect" />
+        </properties>
+    </persistence-unit>
+</persistence>

@@ -1,9 +1,0 @@
-com/testautomation/mesaj/models/users/Users.class
-com/testautomation/mesaj/models/users/Datum.class
-com/testautomation/mesaj/interactions/Post.class
-com/testautomation/mesaj/questions/ResponseCode.class
-com/testautomation/mesaj/tasks/RegisterUser.class
-com/testautomation/mesaj/questions/GetUsersQuestion.class
-com/testautomation/mesaj/facts/NetflixPlans.class
-com/testautomation/mesaj/tasks/GetUsers.class
-com/testautomation/mesaj/models/users/RegisterUserInfo.class

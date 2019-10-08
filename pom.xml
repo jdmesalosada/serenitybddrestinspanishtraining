@@ -19,9 +19,11 @@
     <serenity.maven.version>2.0.9</serenity.maven.version>
     <serenity.cucumber.version>1.9.19</serenity.cucumber.version>
     <encoding>UTF-8</encoding>
+
     <tags></tags>
     <parallel.tests>4</parallel.tests>
 
+    <hibernate.version>5.2.10.Final</hibernate.version>
   </properties>
 
   <repositories>
@@ -46,6 +48,25 @@
   </pluginRepositories>
 
   <dependencies>
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-core</artifactId>
+      <version>5.4.1.Final</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-entitymanager</artifactId>
+      <version>5.4.1.Final</version>
+    </dependency>
+
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+      <version>8.0.15</version>
+      <scope>provided</scope>
+    </dependency>
+
     <dependency>
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-simple</artifactId>
