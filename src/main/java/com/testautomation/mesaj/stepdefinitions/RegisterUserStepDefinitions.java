@@ -1,5 +1,6 @@
 package com.testautomation.mesaj.stepdefinitions;
 
+import com.testautomation.mesaj.models.users.RegisterUserInfo;
 import com.testautomation.mesaj.questions.ResponseCode;
 import com.testautomation.mesaj.tasks.RegisterUser;
 import cucumber.api.java.en.Given;
@@ -20,21 +21,34 @@ public class RegisterUserStepDefinitions {
     public void julianEsUnClienteQueQuierePoderAdministrarSusProductosBancarios() {
         julian = Actor.named("Julian the trainer")
                 .whoCan(CallAnApi.at(restApiUrl));
+        /**/
     }
 
     @When("^el envia la informacion requerida para el registro$")
     public void elEnviaLaInformacionRequeridaParaElRegistro() {
-        String registerUserInfo = "{\n" +
+        /*String registerUserInfo = "{\n" +
                 "\t\"name\": \"morpheus\",\n" +
                 "    \"job\": \"leader\",\n" +
                 "    \"email\": \"tracey.ramos@reqres.in\",\n" +
                 "    \"password\": \"serenity\"\n" +
                 "}";
 
+
+        RegisterUserInfo registerUserInfo = RegisterUserInfo.builder().email("").build();
+
         julian.attemptsTo(
                 RegisterUser.withInfo(registerUserInfo)
 
+        );*/
+
+        julian.attemptsTo(
+                RegisterUser
+                        .withName("morpheus")
+                        .andEmail("tracey.ramos@reqres.in")
+                        .andPassword("security")
+                        .andJob("leader")
         );
+
     }
 
     @Then("^el debe obtener una cuenta virtual para poder ingresar cuando lo requiera$")
