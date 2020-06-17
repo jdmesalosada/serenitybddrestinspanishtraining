@@ -3,8 +3,9 @@ Curso de serenity Rest en español. La lista de reproduccion del curso es: https
 
 
 ## Requirements
-- Node Js
+- Node
 - JDK 1.8
+- Maven
 
 ## Download req/res
 - Clone repo ->  git clone https://github.com/jdmesalosada/reqres.git
