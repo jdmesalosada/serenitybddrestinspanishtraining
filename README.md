@@ -16,4 +16,4 @@ Start the application:
 - Start the app: node app.js
 
 ## Run the tests
-mvn verify -Dcucumber.options="--tags @signup"
+mvn clean verify -Dcucumber.options="--tags @signup"

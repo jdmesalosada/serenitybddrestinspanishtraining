@@ -527,7 +527,8 @@ i.tag {
 }
 
 .error-message-title {
-    font-size: 16px;
+    font-family:monospace; font-size: 14px; color: black;
+    white-space: pre-wrap;
 }
 .parameters {
     display: block;
@@ -1034,7 +1035,7 @@ a.tagLink:visited, a.tagLink:link {
     float: left;
 }
 .step-description-wide-column {
-    width: 750px;
+    width: 730px;
 }
 
 .step-description-column {
@@ -1582,12 +1583,24 @@ ul.second-level-requirements  {
 }
 
 #projectname-banner {
-    float:right
+    float:right;
+    width:70%
 }
 
 .projectname {
     font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
-    font-weight:normal; font-size:2em; color:#428bca; position:relative; top:30px; right:20px;
+    float:right;
+}
+
+.projecttitle {
+    font-weight:normal; font-size:2em; color:#428bca; position:relative;
+    text-align: right;
+}
+
+.projectsubtitle {
+    font-weight:normal; font-style: italic; font-size:1.25em; color:#428bca; position:relative;
+    display: block;
+    text-align: right;
 }
 
 .togglePieChart {
@@ -1682,8 +1695,10 @@ ul.second-level-requirements  {
     color: grey;
 }
 
-.rest-query {
-    padding-left : 10px;
+.piece-of-evidence {
+    padding-left : 1em;
+    padding-top:0.5em;
+    display: block;
 }
 
 .parent-requirement-label {
@@ -1909,6 +1924,11 @@ h3 {
     margin: 0px;
 }
 
+.scenario-docs ul {
+    padding-left: 3.5em;
+    margin: 0px;
+}
+
 .summary-stats td {
     font-weight: bold;
 }
@@ -2079,6 +2099,7 @@ div.scenario-text:empty {
     margin-top: 4px !important;
     margin-bottom: 4px !important;
     font-size: 1em;
+    background-color: rgba(238,0,0,0.3);
 }
 
 .missing-scenario-warning {
@@ -2224,4 +2245,42 @@ td.indented-error-category i {
     margin-left: 3em;
     width: 95%;
     max-width: 95%;
+}
+
+.context-icon {
+   padding-right: 1em;
+}
+
+.more-details-result-compromised { background-color: fuchsia; !important; }
+.more-details-result-error { background-color: darkorange; !important;  }
+.more-details-result-failure { background-color: #f8001f; !important; }
+.more-details-result-skipped { background-color: #B2A671;  !important; }
+.more-details-result-ignored { background-color: #777777;  !important; }
+.more-details-result-pending { background-color: #6884A6; !important;  }
+.more-details-result-success { background-color: #1D9918; !important;  }
+
+.badge-compromised { background-color: fuchsia; }
+.badge-error { background-color: darkorange; }
+.badge-failure { background-color: #f8001f; }
+.badge-skipped { background-color: #B2A671; }
+.badge-ignored { background-color: #777777; }
+.badge-pending { background-color: #6884A6; }
+.badge-success { background-color: #1D9918; }
+
+
+.scenario-report-badges {
+    min-height:1.5em;
+    margin-left:0.5em;
+}
+.scenario-report-badge {
+    float:right;
+}
+
+span.evidence {
+    display: block;
+}
+
+.scenario-docs blockquote {
+    font-style: italic;
+    font-size: 1em;
 }

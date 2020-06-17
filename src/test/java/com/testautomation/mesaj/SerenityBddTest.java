@@ -16,12 +16,12 @@ import javax.persistence.criteria.Root;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-@RunWith(SerenityRunner.class)
+//@RunWith(SerenityRunner.class)
 public class SerenityBddTest {
 
     private final String restApiUrl = "http://localhost:5000/api";
 
-    @Test
+   /* @Test
     public void dataBaseConnectionTest() {
 
         DatabaseConnectionInfo connectionInfo = DatabaseConnectionInfo
@@ -55,5 +55,5 @@ public class SerenityBddTest {
                 .getSingleResult();
 
         System.out.println(queryResult);
-    }
+    }*/
 }
