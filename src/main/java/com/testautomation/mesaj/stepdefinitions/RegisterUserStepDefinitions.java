@@ -21,26 +21,11 @@ public class RegisterUserStepDefinitions {
     public void julianEsUnClienteQueQuierePoderAdministrarSusProductosBancarios() {
         julian = Actor.named("Julian the trainer")
                 .whoCan(CallAnApi.at(restApiUrl));
-        /**/
+
     }
 
     @When("^el envia la informacion requerida para el registro$")
     public void elEnviaLaInformacionRequeridaParaElRegistro() {
-        /*String registerUserInfo = "{\n" +
-                "\t\"name\": \"morpheus\",\n" +
-                "    \"job\": \"leader\",\n" +
-                "    \"email\": \"tracey.ramos@reqres.in\",\n" +
-                "    \"password\": \"serenity\"\n" +
-                "}";
-
-
-        RegisterUserInfo registerUserInfo = RegisterUserInfo.builder().email("").build();
-
-        julian.attemptsTo(
-                RegisterUser.withInfo(registerUserInfo)
-
-        );*/
-
         julian.attemptsTo(
                 RegisterUser
                         .withName("morpheus")
