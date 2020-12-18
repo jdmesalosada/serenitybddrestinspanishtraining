@@ -6,7 +6,8 @@ import net.serenitybdd.screenplay.rest.interactions.RestInteraction;
 import net.thucydides.core.annotations.Step;
 
 import static net.serenitybdd.screenplay.Tasks.instrumented;
-import static net.serenitybdd.screenplay.rest.abiities.CallAnApi.as;
+import static net.serenitybdd.screenplay.rest.abilities.CallAnApi.as;
+
 
 public class Post extends RestInteraction {
 
