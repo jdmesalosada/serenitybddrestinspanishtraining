@@ -15,5 +15,9 @@ Start the application:
 - Install dependencies: npm install
 - Start the app: node app.js
 
-## Run the tests
+## Run the all the tests
+mvn clean verify
+
+## Run tests by tag
 mvn clean verify -Dcucumber.options="--tags @signup"
+
