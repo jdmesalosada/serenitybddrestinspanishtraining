@@ -2,11 +2,11 @@ package com.testautomation.mesaj.stepdefinitions;
 
 import com.testautomation.mesaj.models.Account;
 import com.testautomation.mesaj.models.Money;
-import com.testautomation.mesaj.transformers.MoneyConverter;
-import cucumber.api.Transform;
-import cucumber.api.java.en.Given;
-import cucumber.api.java.en.Then;
-import cucumber.api.java.en.When;
+//import com.testautomation.mesaj.transformers.MoneyConverter;
+
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 
 public class WithdrawStepDefinitions {
 
@@ -15,12 +15,13 @@ public class WithdrawStepDefinitions {
     }
 
 
-    @Given("^en su cuenta tiene un saldo disponible de (\\d+\\.\\d+)$")
+    /*@Given("^en su cuenta tiene un saldo disponible de (\\d+\\.\\d+)$")
     public void en_su_cuenta_tiene_un_saldo_disponible_de(@Transform(MoneyConverter.class) Money pesos) {
+    public void en_su_cuenta_tiene_un_saldo_disponible_de(@(MoneyConverter.class) Money pesos) {
         Account myAccount = new Account();
         myAccount.deposit(pesos);
 
-    }
+    }*/
 
     @When("^el intenta retirar de su cuenta (\\d+)$")
     public void el_intenta_retirar_de_su_cuenta(int arg1) {

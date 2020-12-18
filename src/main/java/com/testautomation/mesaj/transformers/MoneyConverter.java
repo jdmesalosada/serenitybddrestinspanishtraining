@@ -1,7 +1,7 @@
 package com.testautomation.mesaj.transformers;
 
 import com.testautomation.mesaj.models.Money;
-import cucumber.api.Transformer;
+/*import cucumber.api.Transformer;
 
 public class MoneyConverter extends Transformer<Money> {
 
@@ -11,4 +11,4 @@ public class MoneyConverter extends Transformer<Money> {
         int cents = Integer.parseInt(numbers[1]);
         return new Money(pesos, cents);
     }
-}
+}*/

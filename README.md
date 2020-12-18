@@ -19,5 +19,5 @@ Start the application:
 mvn clean verify
 
 ## Run tests by tag
-mvn clean verify -Dcucumber.options="--tags @signup"
+mvn clean verify -Dcucumber.filter.tags="@signup"
 
