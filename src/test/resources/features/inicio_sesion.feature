@@ -5,7 +5,7 @@ Feature: Inicio de sesion
 
   @run
   Scenario Outline: Cliente intenta iniciar sesion con contrasena no valida
-    Given Julian es un cliente que quiere iniciar QuestionsStepDefinitions.java:sesion para administrar sus productos
+    Given Julian es un cliente que quiere iniciar sesion para administrar sus productos
     When el envia la contrasena <contrasena>
     Then el debe ser informado que la contrasena no es valida
     Examples:
