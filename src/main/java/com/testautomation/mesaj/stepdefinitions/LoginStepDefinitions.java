@@ -19,9 +19,6 @@ public class LoginStepDefinitions {
 
     @When("^el envia la contrasena (.*)$")
     public void el_envia_la_contrasena(String pass) {
-
         System.out.println(pass);
     }
-
-
 }

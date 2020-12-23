@@ -157,6 +157,9 @@
             <include>**/features/**/*.java</include>
             <include>**/*Test*.java</include>
           </includes>
+          <systemPropertyVariables>
+            <restapi.baseurl>${restapi.baseurl}</restapi.baseurl>
+          </systemPropertyVariables>
         </configuration>
         <executions>
           <execution>
@@ -203,5 +206,17 @@
     </plugins>
   </build>
   <profiles>
+    <profile>
+      <id>dev</id>
+      <properties>
+        <restapi.baseurl>http://localhost:5000/api</restapi.baseurl>
+      </properties>
+    </profile>
+    <profile>
+      <id>prod</id>
+      <properties>
+        <restapi.baseurl>https://reqres.in/api</restapi.baseurl>
+      </properties>
+    </profile>
   </profiles>
 </project>
