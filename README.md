@@ -16,18 +16,18 @@ Start the application:
 - Start the app: node app.js
 
 ## Run the all the tests
-mvn clean verify
+- mvn clean verify
 
 ## Run tests by tag
-mvn clean verify -Dcucumber.filter.tags="@signup"
-mvn clean verify -Dcucumber.filter.tags="@update"
+- mvn clean verify -Dcucumber.filter.tags="@signup"
+- mvn clean verify -Dcucumber.filter.tags="@update"
 
 ## Run tests in a specific environment
-mvn verify -Pdev -Dcucumber.filter.tags="@signup"
-mvn verify -Pprod -Dcucumber.filter.tags="@update"
+- mvn verify -Pdev -Dcucumber.filter.tags="@signup"
+- mvn verify -Pprod -Dcucumber.filter.tags="@update"
 
 or
 
-mvn verify -Drestapi.baseurl=http://localhost:5000/api
+- mvn verify -Drestapi.baseurl=http://localhost:5000/api
 
 
