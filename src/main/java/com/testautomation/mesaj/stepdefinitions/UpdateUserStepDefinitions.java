@@ -1,16 +1,11 @@
 package com.testautomation.mesaj.stepdefinitions;
 
-import com.testautomation.mesaj.tasks.RegisterUser;
 import com.testautomation.mesaj.tasks.UpdateUser;
 import com.testautomation.mesaj.tasks.UpdateUsers;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import net.serenitybdd.screenplay.actors.OnlineCast;
 
-import static net.serenitybdd.screenplay.actors.OnStage.setTheStage;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
-import static net.serenitybdd.screenplay.rest.questions.ResponseConsequence.seeThatResponse;
-import static org.hamcrest.text.IsEmptyString.isEmptyString;
 
 public class UpdateUserStepDefinitions {
 
@@ -30,11 +25,6 @@ public class UpdateUserStepDefinitions {
 
     @Then("^el usuario con id (.*) deberia ser actualizado$")
     public void elUsuarioDeberiaSerActualizado(int id) {
-        theActorInTheSpotlight()
-                .should(
-                        seeThatResponse(response ->
-                                response.statusCode(200)
-                                        .contentType("application/json; charset=utf-8"))
-                );
+
     }
 }
